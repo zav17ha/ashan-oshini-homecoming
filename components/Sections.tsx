@@ -74,7 +74,6 @@ export function Letter({ guest }: { guest: string }) {
           <Reveal delay={0.1}><h2 className="script guest-big gold-text">{guest || "Our Beloved Guest"}</h2></Reveal>
           <Reveal delay={0.2}><p className="lead">With hearts full of joy, we invite you to celebrate our homecoming as we begin our new life together.</p></Reveal>
           <Reveal delay={0.25}><p className="lead">Your presence would mean the world to us.</p></Reveal>
-          <Reveal delay={0.3}><p className="date-words">Friday, 18 December 2026 · 7:00 PM</p></Reveal>
           <Reveal delay={0.35}><p className="sign">{WEDDING.groom} &amp; {WEDDING.bride}</p></Reveal>
         </div>
       </div>
@@ -283,6 +282,10 @@ export function Footer() {
     <footer className="site-foot">
       <span className="mono">A<i>&amp;</i>O</span>
       <p>18 · 12 · 2026 · Divulapitiya</p>
+      <small className="credit">
+        Want to make your e-invitation something lovely? Contact{" "}
+        <a href="https://craxe.org" target="_blank" rel="noopener">Craxe</a>
+      </small>
     </footer>
   );
 }

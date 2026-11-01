@@ -6,13 +6,13 @@ import { motion, useScroll, useTransform, type MotionValue } from "framer-motion
 
 type Tile = { key: string; src: string; alt: string; pos: string; drift: number; delay: number };
 
-// Grouped by outfit: the red gown first, then the maroon dress.
+// All photos from the red gown session.
 const TILES: Tile[] = [
   { key: "a", src: "/images/stables.jpg", alt: "Ashan and Oshini at the doors of The Stables, Chatham Street", pos: "50% 60%", drift: -24, delay: 0 },
   { key: "b", src: "/images/colonnade.jpg", alt: "Ashan and Oshini among white colonial arches", pos: "50% 60%", drift: 18, delay: 0.15 },
   { key: "c", src: "/images/bench.jpg", alt: "Ashan and Oshini seated back to back on a stone bench", pos: "40% 70%", drift: -20, delay: 0.3 },
-  { key: "d", src: "/images/steps.jpg", alt: "Ashan and Oshini sitting together on old stone steps", pos: "50% 45%", drift: 22, delay: 0.1 },
-  { key: "e", src: "/images/lighthouse.jpg", alt: "Ashan and Oshini walking hand in hand down the lighthouse steps", pos: "50% 80%", drift: -16, delay: 0.25 },
+  { key: "d", src: "/images/street-walk.jpg", alt: "Ashan and Oshini walking arm in arm past The Stables", pos: "55% 72%", drift: 22, delay: 0.1 },
+  { key: "e", src: "/images/arch-embrace.jpg", alt: "Ashan and Oshini embracing beneath a white arch", pos: "45% 45%", drift: -16, delay: 0.25 },
 ];
 
 function Photo({ tile, progress }: { tile: Tile; progress: MotionValue<number> }) {

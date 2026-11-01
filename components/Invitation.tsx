@@ -36,11 +36,11 @@ export default function Invitation({ guest, code = "" }: { guest: string; code?:
         <main>
           <Hero />
           <Letter guest={guest} />
-          <Countdown />
-          <Collage />
-          <Unveil />
           <SaveTheDate />
           <Venue />
+          <Collage />
+          <Unveil />
+          <Countdown />
           <Rsvp guest={guest} code={guest ? code : ""} />
           <Farewell guest={guest} />
         </main>
