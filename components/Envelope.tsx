@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { useAnimate } from "framer-motion";
 import { celebrate } from "./effects";
+import { startMusic } from "./Music";
 import { WEDDING } from "@/lib/wedding";
 
 type Props = { guest: string; onOpening: () => void; onOpened: () => void };
@@ -36,6 +37,7 @@ export default function Envelope({ guest, onOpening, onOpened }: Props) {
   async function open() {
     if (busy.current) return;
     busy.current = true;
+    startMusic(); // must run inside the tap itself, or phones block the sound
     const root = scope.current;
     const seal = root.querySelector(".seal") as HTMLElement;
     const r = seal.getBoundingClientRect();

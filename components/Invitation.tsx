@@ -5,6 +5,7 @@ import { MotionConfig } from "framer-motion";
 import Envelope from "./Envelope";
 import Collage from "./Collage";
 import Rsvp from "./Rsvp";
+import Music from "./Music";
 import { Celebration, GoldDust } from "./effects";
 import { Countdown, Farewell, Footer, Hero, Letter, SaveTheDate, Unveil, Venue } from "./Sections";
 
@@ -32,6 +33,7 @@ export default function Invitation({ guest, code = "" }: { guest: string; code?:
           />
         )}
         <GoldDust />
+        <Music visible={stage !== "sealed"} />
         <Celebration />
         <main>
           <Hero />
